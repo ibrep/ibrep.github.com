@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h3>龙芯主板开箱装机评测</h3>
+  <p>
+  <a href="https://www.bilibili.com/video/av14373735/" target="_blank">
+    <img src="{{ site.url }}/assets/images/chip-with-flag.jpg" alt="龙芯主板开箱装机评测"/>
+  </a>
+  </p>
+  <h3>龙芯汇编语言程序设计教程</h3>
+  <p>
+  <a href="{{site.usrl}}/mips-asm/"><img src="{{ site.url }}/assets/images/mips-asm.png" alt="龙芯汇编语言程序设计教程" /></a>
+  </p>
+  
+  <!--
+  <h1 class="page-heading">龙芯专辑</h1>
+  <ul class="post-list">
+	  {% for article in site.categories.loongson %}
+		<li>
+      		<span class="post-meta">{{ article.date | date:"%b %-d, %Y"}}</span>
+		<h3><a class="post-link" href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a></h3>
+		</li>
+	  {% endfor %}
+  </ul>	  
+  -->
+  <!--
+  <h1 class="page-heading">笔记整理</h1>
+
+  {% for category in site.categories %}
+  <h2>{{ category | first }} (</span class="post-meta">{{ category | last | size }}篇文章</span>)</h2>
+  <ul class="post-list">
+    {% for post in category.last %}
+    <li>
+      <span class="post-meta">{{ post.date | date:"%b %-d, %Y"}}</span>
+      <h3>
+	 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h3>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+  -->
+  
+  <!--
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+  -->
+
+  <p class="rss-subscribe">通过<a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>订阅</p>
+
+</div>
