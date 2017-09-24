@@ -11,19 +11,19 @@ Name |	Number	|	Description		|	Callee-preserve
 -----------------------------------------------------------------------
 zero |	0	|	Constant zero.		|	N/A
 -----------------------------------------------------------------------
-at	1		Reserved for use by assemlber.	No
+at |	1	|	Reserved for use by assemlber. |	No
 -----------------------------------------------------------------------
-v0	2		Stores return value from	No
-v1	3		function calls.			
+v0 |	2	|	Stores return value from |	No
+v1 |	3	|	function calls.			 |
 -----------------------------------------------------------------------
-a0	4		Function arguments.		No
-a1	5
-a2	6
-a3	7
-a4	8
-a5	9
-a6	10
-a7	11
+a0 |	4	|	Function arguments.	 |	No
+a1 |	5   |                         |
+a2 |	6   |                         |
+a3 |	7   |                         |
+a4 |	8   |                         |
+a5 |	9   |                          |
+a6 |	10  |                          |
+a7 |	11  |                          |
 -----------------------------------------------------------------------
 t0	12		Temporary value.		No
 t1	13
