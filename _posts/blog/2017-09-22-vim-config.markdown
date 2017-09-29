@@ -2,7 +2,7 @@
 layout: post
 title:  "Vim常用配置"
 date:   2017-09-22 19:49:25 +0800
-categories: Vim
+categories: blog 
 ---
 注释用双引号开头：
 
