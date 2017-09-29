@@ -30,6 +30,11 @@ categories: blog
 
 	M-*
 
+这些组合键按起来不方便，可以改为：
+	
+	(global-set-key (kbd "<f12>") (kbd "C-u M-."))
+	(global-set-key (kbd "<f11>") (kbd "M-*"))
+
 # Vim中的tags操作
 加载tags文件：
 
