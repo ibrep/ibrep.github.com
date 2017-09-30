@@ -5,7 +5,7 @@ date: 2017-09-25 00:49:25 +0800
 categories: mips-asm
 order: 2
 ---
-<a href="https://www.bilibili.com/video/av14809674/"><img src="{{ site.url }}/assets/images/video-icon.png" alt="龙芯汇编语言程序设计教程" /></a>
+<a href="https://www.bilibili.com/video/av14809674/" target="_blank"><img src="{{ site.url }}/assets/images/video-icon.png" alt="龙芯汇编语言程序设计教程" /></a>
 
 # 本节课的目标
   * 了解龙芯CPU中的寄存器
@@ -85,7 +85,7 @@ hi, lo这两个寄存器专用于乘法和除法，乘除等算数运算我们�
 
 # 编程练习
 
-```MIPS Assembly
+```MIPS
 	    /* move.s: Move data between registers 
     	8 --> t0 --> t1 --> t2 --> t3 --> v0 */
 	    .text

@@ -5,7 +5,7 @@ date: 2017-09-24 18:49:25 +0800
 categories: mips-asm
 order: 1
 ---
-<a href="https://www.bilibili.com/video/av14809674/"><img src="{{ site.url }}/assets/images/video-icon.png" alt="龙芯汇编语言程序设计教程" /></a>
+<a href="https://www.bilibili.com/video/av14809674/" target="_blank"><img src="{{ site.url }}/assets/images/video-icon.png" alt="龙芯汇编语言程序设计教程" /></a>
 
 # 本节课的目标
 + 编写第一个汇编语言程序
@@ -21,7 +21,7 @@ order: 1
 > 汇编语言不是用来写应用软件的！
 
 # 第一个汇编语言程序
-```MIPS Assembly
+```MIPS
 /* first.s:
   This is our first MIP64 program,
   Runing on Loongson 3A3000 */
