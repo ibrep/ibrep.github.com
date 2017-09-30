@@ -49,25 +49,6 @@ order: 2
 
 显然，宏指令更容易读懂。
 
-\section{程序示例}
-
-\lstset{numbers=left}
-\begin{lstlisting}
-/* move.s: Move data between registers */
-
-        .text
-        .global main
-
-        .ent main
-main:   li $t0, 8       # t0=8
-        move $t1, $t0   # t1=t0
-        move $t2, $t1   # t2=t1
-        move $t3, $t2   # t3=t2
-
-        move $v0, $t3   # v0=t3
-        jr $ra          # return
-        .end main
-
 # hi,lo寄存器
 
 hi, lo这两个寄存器专用于乘法和除法，乘除等算数运算我们以后再讲，今天先学会如何读取和写入这两个寄存器。
@@ -86,16 +67,16 @@ hi, lo这两个寄存器专用于乘法和除法，乘除等算数运算我们�
 # 编程练习
 
 ```MIPS
-	    /* move.s: Move data between registers 
-    	8 --> t0 --> t1 --> t2 --> t3 --> v0 */
-	    .text
-	    .global main
-	    .ent main
-main:	li $t0, 8	# t0=8
-       move $t1, $t0	# t1=t0
-		move $t2, $t1	# t2=t1
-		move $t3, $t2	# t3=t2
-		move $v0, $t3	# v0=t3
-		jr $ra		# return
-		.end main
+/* move.s: Move data between registers 
+   8 --> t0 --> t1 --> t2 --> t3 --> v0 */
+   .text
+   .global main
+   .ent main
+main: li $t0, 8	# t0=8
+	move $t1, $t0	# t1=t0
+	move $t2, $t1	# t2=t1
+	move $t3, $t2	# t3=t2
+	move $v0, $t3	# v0=t3
+	jr $ra		# return
+	.end main
 ```

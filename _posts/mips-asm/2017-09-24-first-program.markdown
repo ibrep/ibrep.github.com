@@ -35,6 +35,7 @@ main:	nop
 	jr $ra		# Return
 	.end main	# End of main
 ```
+
 ## 注释的风格
 + 多行注释： /* ... */ 
 + 单行注释： #
