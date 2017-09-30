@@ -97,7 +97,7 @@ main:	li $t0, 6	   # a --> t0
 
 例如：
 
-<img src="{{ site.url }}/assets/images/mips-asm/lesson2-formula-2.png" />
+<img src="{{ site.url width="320" }}/assets/images/mips-asm/lesson2-formula-2.png" />
 
 # 更多的GDB命令：
 
