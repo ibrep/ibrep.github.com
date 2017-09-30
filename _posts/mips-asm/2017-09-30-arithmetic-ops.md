@@ -3,7 +3,7 @@ layout: post
 title:  "3. 算术运算"
 date: 2017-09-25 00:49:25 +0800
 categories: mips-asm
-order: 2
+order: 3
 ---
 <a href="https://www.bilibili.com/video/av14809674/" target="_blank"><img src="{{ site.url }}/assets/images/video-icon.png" alt="龙芯汇编语言程序设计教程" /></a>
 
