@@ -15,7 +15,7 @@ categories: kernel
 load-$(CONFIG_LOONGSON_MACH3X) += 0xffffffff80200000
 ```
 
-    而在 `.config`中，有：
+    而在 `.config` 中，有：
 
 ```C
 CONFIG_LOONGSON_MACH3X=y
