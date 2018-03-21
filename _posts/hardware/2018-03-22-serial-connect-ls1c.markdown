@@ -17,4 +17,12 @@ USB串口调试线接开发板串口（在SPI flash下方），白、绿、黑�
 ```
 要退出screen，可以按 `Ctrl-A \`。
 
+## 更改`/dev/ttyUSB0`的默认权限
+`/dev/ttyUSB0`的默认权限是`rw-rw----`，每次都要更改权限才能用普通用户访问，太麻烦了。可以通过创建一条定制`udev`规则解决这个问题：
+```
+[brep@Loongson ~]$ sudo vi /etc/udev/rules.d/50-udev-default.rules
+[brep@Loongson ~]$ cat /etc/udev/rules.d/50-udev-default.rules 
+# serial
+KERNEL=="tty[A-Z]*|pppox*|ircomm*|noz*", GROUP="uucp", MODE="0666"
+```
 
