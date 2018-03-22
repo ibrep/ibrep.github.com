@@ -26,4 +26,6 @@ USB串口调试线接开发板串口（在SPI flash下方），白、绿、黑�
 # serial
 KERNEL=="tty[A-Z]*|pppox*|ircomm*|noz*", GROUP="uucp", MODE="0666"
 ```
+**这样改了以后，系统重启后找不到鼠标，不知道原因是什么，以后有时间再慢慢查吧。**
+
 
