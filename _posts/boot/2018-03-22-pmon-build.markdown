@@ -60,8 +60,9 @@ cfg:
 	cd ../Targets/${TARGET}/conf/;pmoncfg ${TARGETEL}
 	make -C ../Targets/${TARGET}/compile/${TARGETEL}/ depend clean
 ```
-构建cfg时，创建了 `Target/LS2K/compile/ls2k`目录，执行pmoncfg时，在此目录下生成了真正的`Makefile`，
-执行`make`命令时生成了真正的目标文件`pmon`。
+构建cfg时，创建了 `Target/LS2K/compile/ls2k`目录，在此目录下执行pmoncfg时，生成了真正的`Makefile`，
+而它又包含了源码顶层目录的`Makefile.inc`, 然后执行`make`命令，生成了真正的目标文件`pmon`。
+
 ```
 OBJS= ...
 
