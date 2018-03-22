@@ -2,7 +2,7 @@
 layout: page
 title: 龙芯汇编
 permalink: /mips-asm/
-order: 1
+order: 2
 ---
 <!--
 <ul class="post-list">

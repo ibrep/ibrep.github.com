@@ -2,7 +2,7 @@
 layout: page
 title: 博客
 permalink: /blog/
-order: 2
+order: 1
 ---
 <ul class="post-list">
   {% for article in site.categories.blog %}

@@ -2,7 +2,7 @@
 layout: post
 title:  "串口连接智龙开发板V2.1"
 date:   2018-03-22 01:58:25 +0800
-categories: hardware
+categories: boot
 ---
 # 在Loongnix下通过串口连接智龙开发板
 ## 接线方式
