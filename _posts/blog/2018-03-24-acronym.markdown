@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "缩略词表"
+date:   2018-03-24 01:49:25 +0800
+categories: blog 
+---
+`AHCI(Advanced Host Controller Interface)`: 高级主机控制器接口
+
+`OHCI(Open Host Controller Interface)`: 开放主机控制器接口
+
+`EHCI(Enhanced Host Controller Interface)`: 增强型主机控制器接口
+
+`GMAC(Gigabit Media Access Controller)`: 千兆媒体访问控制器
+
+`UART(Universal Asynchronous Receiver/Transmitter)`: 通用异步收发器
+
+
