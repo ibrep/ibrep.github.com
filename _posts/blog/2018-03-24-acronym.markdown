@@ -14,4 +14,5 @@ categories: blog
 
 `UART(Universal Asynchronous Receiver/Transmitter)`: 通用异步收发器
 
+`LSR(Line Status Register)`: 行状态寄存器
 
