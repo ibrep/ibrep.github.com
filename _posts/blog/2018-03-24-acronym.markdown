@@ -16,3 +16,11 @@ categories: blog
 
 `LSR(Line Status Register)`: 行状态寄存器
 
+`APB(Advanced Peripheral Bus)`: 高级外设总线
+
+`EFI(Extensible Firmware Interface)`: 可扩展固件接口
+
+`ACPI(Advanced Configuration and Power Management Interface)`: 高级配置和电源管理接口
+
+`NUMA(Non Uniform Memory Access Architecture)`: 非统一内存访问架构
+
