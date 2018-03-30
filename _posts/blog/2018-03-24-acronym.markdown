@@ -10,6 +10,8 @@ categories: blog
 
 `EHCI(Enhanced Host Controller Interface)`: 增强型主机控制器接口
 
+`UHCI(Universal Host Controller Interface)`: 通用主机控制器接口
+
 `GMAC(Gigabit Media Access Controller)`: 千兆媒体访问控制器
 
 `UART(Universal Asynchronous Receiver/Transmitter)`: 通用异步收发器
@@ -23,4 +25,6 @@ categories: blog
 `ACPI(Advanced Configuration and Power Management Interface)`: 高级配置和电源管理接口
 
 `NUMA(Non Uniform Memory Access Architecture)`: 非统一内存访问架构
+
+`OTG(On-The-Go)`: 用于USB设备间的数据交换
 
