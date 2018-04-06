@@ -1,0 +1,217 @@
+---
+layout: post
+title:  "tikz画图"
+date:   2018-04-04 23:39:25 +0800
+categories: blog 
+---
+# 教程
+## 1环境设置
+```
+\documentclass{article} % say
+\usepackage{tikz}
+\begin{document}
+We are working on
+\begin{tikzpicture}
+  \draw (-1.5,0) -- (1.5,0);
+  \draw (0,-1.5) -- (0,1.5);
+\end{tikzpicture}.
+\end{document}
+```
+## 2 绘制直线
+```
+\tikz \draw (-1.5,0) -- (1.5,0) -- (0,-1.5) -- (0,1.5);
+```
+## 3 绘制曲线
+```
+\begin{tikzpicture}
+\filldraw [gray] (0,0) circle [radius=2pt]
+                 (1,1) circle [radius=2pt]
+                 (2,1) circle [radius=2pt]
+                 (2,0) circle [radius=2pt];
+  \draw (0,0) .. controls (1,1) and (2,1) .. (2,0);
+\end{tikzpicture}
+```
+## 4 绘制圆弧
+```
+\draw (0,0) circle [radius=10pt];
+\draw (0,0) ellipse [x radius=20pt, y radius=10pt];
+\draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+```
+```
+\begin{tikzpicture}
+  \draw (-1.5,0) -- (1.5,0);
+  \draw (0,-1.5) -- (0,1.5);
+  \draw (0,0) circle [radius=1cm];
+\end{tikzpicture}
+```
+## 5 绘制矩形
+```
+\begin{tikzpicture}
+  \draw (-1.5,0) -- (1.5,0);
+  \draw (0,-1.5) -- (0,1.5);
+  \draw (0,0) circle [radius=1cm];
+  \draw (0,0) rectangle (0.5,0.5);
+  \draw (-0.5,-0.5) rectangle (-1,-1);
+\end{tikzpicture}
+```
+## 6 绘制网格
+```
+\begin{tikzpicture}
+  \draw (-1.5,0) -- (1.5,0);
+  \draw (0,-1.5) -- (0,1.5);
+  \draw (0,0) circle [radius=1cm];
+  \draw[step=.5cm] (-1.4,-1.4) grid (1.4,1.4);
+\end{tikzpicture}
+```
+```
+\begin{tikzpicture}
+  \draw[step=.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+  \draw (-1.5,0) -- (1.5,0);
+  \draw (0,-1.5) -- (0,1.5);
+  \draw (0,0) circle [radius=1cm];
+\end{tikzpicture}
+```
+## 7 定义样式
+```
+\tikzset{help lines/.style={color=blue!50,very thin}}
+```
+```
+\begin{tikzpicture}
+  [Karl’s grid/.style ={help lines,color=#1!50},
+   Karl’s grid/.default=blue]
+
+  \draw[Karl’s grid]     (0,0) grid (1.5,2);
+  \draw[Karl’s grid=red] (2,0) grid (3.5,2);
+  \end{tikzpicture}
+```
+## 8 说明坐标
+```
+(10pt, 2cm) % 直角坐标
+(30:1cm) % 极坐标
++(1cm, 0cm) % 增量坐标，以前一点为基点
+++(2cm, 3cm) % 增量坐标，并使新的点成为基点
+(<p> |- <q>) % 通过p点的垂线与通过q点的水平线的交点
+```
+## 9 路径的交点
+```
+\path [name path=upward line] (1,0) -- (1,1);
+\path [name path=sloped line] (0,0) -- (30:1.5cm); % a bit longer, so that there is an intersection
+\draw [name intersections={of=upward line and sloped line, by=x}]
+      [very thick,orange] (1,0) -- (x);
+```
+## 10 添加箭头
+```
+\draw[->] (-1.5,0) -- (1.5,0); % 单向箭头
+\draw [<->] (0,0) arc [start angle=180, end angle=30, radius=10pt]; % 双向箭头
+\draw [<->] (1,0) -- (1.5cm,10pt) -- (2cm,0pt) -- (2.5cm,10pt);
+```
+```
+\begin{tikzpicture}[>=Stealth] % 箭头类型为“隐身战机”
+\draw [->] (0,0) arc [start angle=180, end angle=30, radius=10pt];
+\draw [<<-,very thick] (1,0) -- (1.5cm,10pt) -- (2cm,0pt) -- (2.5cm,10pt); % 末端有两个箭头
+\end{tikzpicture}
+```
+## 11 裁剪路径
+```
+\begin{tikzpicture}[scale=3] 
+  \clip (-0.1,-0.2) rectangle (1.1,0.75); % 裁剪所有后续绘制
+  \draw[step=.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+  \draw (-1.5,0) -- (1.5,0);
+  \draw (0,-1.5) -- (0,1.5);
+  \draw (0,0) circle [radius=1cm];
+  \draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+\end{tikzpicture}
+```
+```
+\begin{tikzpicture}[scale=3]
+  \clip[draw] (0.5,0.5) circle (.6cm); % 裁剪区域为圆形
+  \draw[step=.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+  \draw (-1.5,0) -- (1.5,0);
+  \draw (0,-1.5) -- (0,1.5);
+  \draw (0,0) circle [radius=1cm];
+  \draw (3mm,0mm) arc [start angle=0, end angle=30, radius=3mm];
+\end{tikzpicture}
+```
+## 12 抛物线和正弦曲线
+```
+\draw (0,0) rectangle (1,1)  (0,0) parabola (1,1);
+\draw[x=1pt,y=1pt] (0,0) parabola bend (4,16) (6,12);
+\draw[x=1ex,y=1ex] (0,0) sin (1.57,1); 
+\draw[x=1.57ex,y=1ex] (0,0) sin (1,1) cos (2,0) sin (3,-1) cos (4,0)
+                      (0,1) cos (1,0) sin (2,-1) cos (3,0) sin (4,1);
+```
+## 13 填充
+```
+\fill[green!20!white] (0,0) -- (3mm,0mm)
+  arc [start angle=0, end angle=30, radius=3mm] -- (0,0);
+```
+```
+\fill[green!20!white] (0,0) -- (3mm,0mm)
+  arc [start angle=0, end angle=30, radius=3mm] -- cycle;
+```
+```
+\filldraw[fill=green!20!white, draw=green!50!black] (0,0) -- (3mm,0mm)
+  arc [start angle=0, end angle=30, radius=3mm] -- cycle;
+```
+## 14 着色
+```
+\shade (0,0) rectangle (2,1)  (3,0.5) circle (.5cm);
+```
+```
+\begin{tikzpicture}[rounded corners,ultra thick]
+\shade[top color=yellow,bottom color=black] (0,0) rectangle +(2,1);
+\shade[left color=yellow,right color=black] (3,0) rectangle +(2,1);
+\shadedraw[inner color=yellow,outer color=black,draw=yellow] (6,0) rectangle +(2,1); 
+\shade[ball color=green] (9,.5) circle (.5cm);
+\end{tikzpicture}
+```
+```
+\shadedraw[left color=gray,right color=green, draw=green!50!black]
+  (0,0) -- (3mm,0mm)
+  arc [start angle=0, end angle=30, radius=3mm] -- cycle;
+```
+## 15 范围
+```
+\begin{tikzpicture}[ultra thick]
+  \draw (0,0) -- (0,1);
+  \begin{scope}[thin]
+    \draw (1,0) -- (1,1);
+    \draw (2,0) -- (2,1);
+  \end{scope}
+  \draw (3,0) -- (3,1);
+\end{tikzpicture}
+```
+## 16 变换
+```
+\tikz \draw (0,0) -- (0,0.5) [xshift=2pt] (0,0) -- (0,0.5);
+```
+```
+\begin{tikzpicture}[even odd rule,rounded corners=2pt,x=10pt,y=10pt]
+  \filldraw[fill=yellow!80!black] (0,0) rectangle (1,1)
+    [xshift=5pt,yshift=5pt] (0,0) rectangle (1,1)
+           [rotate=30] (-1,-1) rectangle (2,2);
+  \end{tikzpicture}
+```
+## 17 循环
+```
+\foreach \x in {1,2,3} {$x =\x$, }
+```
+```
+\foreach \x in {-1,-0.5,1}
+ \draw[xshift=\x cm] (0pt,-1pt) -- (0pt,1pt);
+```
+```
+\foreach \x in {1,...,10}
+        \draw (\x,0) circle (0.4cm);
+```
+```
+\begin{tikzpicture}
+  \foreach \x in {1,2,...,5,7,8,...,12}
+    \foreach \y in {1,...,5}
+    {
+      \draw (\x,\y) +(-.5,-.5) rectangle ++(.5,.5);
+      \draw (\x,\y) node{\x,\y};
+    }
+\end{tikzpicture}
+```
+
