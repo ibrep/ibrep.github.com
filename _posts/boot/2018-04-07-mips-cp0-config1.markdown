@@ -11,37 +11,37 @@ Config1中与Cache相关的字段有：
 |    IS |    IL |    IA |    DS |    DL |  DA |
 
 ## `IS`: Icache每路的组数
-| Encoding |  Meaning |   |
-|        0 |       64 |   |
-|        1 |      128 |   |
-|        2 |      256 |   |
-|        3 |      512 |   |
-|        4 |     1024 |   |
-|        5 |     2048 |   |
-|        6 |     4096 |   |
-|        7 | Reserved |   |
+| Encoding |  Meaning | 备注 |
+|        0 |       64 |      |
+|        1 |      128 |      |
+|        2 |      256 |      |
+|        3 |      512 |      |
+|        4 |     1024 |      |
+|        5 |     2048 |      |
+|        6 |     4096 |      |
+|        7 | Reserved |      |
 
 ## `IL`: Icache 每行的大小
-| Encoding | Meaning           |
-|        0 | No Icache present |
-|        1 | 4 bytes           |
-|        2 | 8 bytes           |
-|        3 | 16 bytes          |
-|        4 | 32 bytes          |
-|        5 | 64 bytes          |
-|        6 | 128 bytes         |
-|        7 | Reserved          |
+| Encoding | Meaning           | 备注 |
+|        0 | No Icache present |      |
+|        1 | 4 bytes           |      |
+|        2 | 8 bytes           |      |
+|        3 | 16 bytes          |      |
+|        4 | 32 bytes          |      |
+|        5 | 64 bytes          |      |
+|        6 | 128 bytes         |      |
+|        7 | Reserved          |      |
 
 ## `IA`: Icacche组相连数
-| Encoding | Meaning       |
-|        0 | Direct Mapped |
-|        1 | 2-way         |
-|        2 | 3-way         |
-|        3 | 4-way         |
-|        4 | 5-way         |
-|        5 | 6-way         |
-|        6 | 7-way         |
-|        7 | 8-way         |
+| Encoding | Meaning       | 备注 |
+|        0 | Direct Mapped |      |
+|        1 | 2-way         |      |
+|        2 | 3-way         |      |
+|        3 | 4-way         |      |
+|        4 | 5-way         |      |
+|        5 | 6-way         |      |
+|        6 | 7-way         |      |
+|        7 | 8-way         |      |
 
 ## `DS`: Dcache 每路的组数
 意义与Icache相同。
