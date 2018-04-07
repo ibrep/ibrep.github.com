@@ -11,15 +11,15 @@ Config1中与Cache相关的字段有：
 |    IS |    IL |    IA |    DS |    DL |  DA |
 
 ## `IS`: Icache每路的组数
-| Encoding |  Meaning ||
-|        0 |       64 ||
-|        1 |      128 ||
-|        2 |      256 ||
-|        3 |      512 ||
-|        4 |     1024 ||
-|        5 |     2048 ||
-|        6 |     4096 ||
-|        7 | Reserved ||
+| Encoding |  Meaning |   |
+|        0 |       64 |   |
+|        1 |      128 |   |
+|        2 |      256 |   |
+|        3 |      512 |   |
+|        4 |     1024 |   |
+|        5 |     2048 |   |
+|        6 |     4096 |   |
+|        7 | Reserved |   |
 
 ## `IL`: Icache 每行的大小
 | Encoding | Meaning           |
