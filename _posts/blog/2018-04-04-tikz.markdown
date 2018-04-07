@@ -214,4 +214,17 @@ We are working on
     }
 \end{tikzpicture}
 ```
+## 添加文字
+绘制时，如果遇到`node`关键字，就会添加文字。`node`的语法是:
+```node [选项] {文字}
+```
+
+控制文字的位置：
+```
+node[anchor=north] {text} % 文字在下面
+node[anchor=east] {text} % 文字在左边
+node[below] {text} % 文字在下面
+node[above right] {text} % 文字在右上方
+node[below=1pt] {text} % 文字在下面，并移位1pt
+```
 
