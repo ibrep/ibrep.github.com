@@ -14,6 +14,7 @@ Config1中与Cache相关的字段有：
 ## `IS`: Icache每路的组数
 
 | Encoding |  Meaning | 备注 |
+|----------|----------|------|
 |        0 |       64 |      |
 |        1 |      128 |      |
 |        2 |      256 |      |
@@ -26,6 +27,7 @@ Config1中与Cache相关的字段有：
 ## `IL`: Icache 每行的大小
 
 | Encoding | Meaning           | 备注 |
+|----------|-------------------|------|
 |        0 | No Icache present |      |
 |        1 | 4 bytes           |      |
 |        2 | 8 bytes           |      |
@@ -38,6 +40,7 @@ Config1中与Cache相关的字段有：
 ## `IA`: Icacche组相连数
 
 | Encoding | Meaning       | 备注 |
+|----------|---------------|------|
 |        0 | Direct Mapped |      |
 |        1 | 2-way         |      |
 |        2 | 3-way         |      |
@@ -74,6 +77,7 @@ CACHE op, offset(base)
 龙芯1C的GS232核支持以下Cache操作：
 
 | op      | 描述                       | 目标   |
+|---------+----------------------------+--------|
 | 0b00000 | Index Invalidate           | Icache |
 | 0b00001 | Index Writeback Invalidate | Dcache |
 | 0b00101 | Index Load Tag             | Dcache |
