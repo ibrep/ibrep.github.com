@@ -7,10 +7,12 @@ categories: boot
 # CP0 Config1寄存器
 CPU中与Cache相关的参数都可以在CP0 Config1 (register 16, select 1)中查到，这是一个只读寄存器。
 Config1中与Cache相关的字段有：
+
 | 24:22 | 21:19 | 18:16 | 15:13 | 12:10 | 9:7 |
 |    IS |    IL |    IA |    DS |    DL |  DA |
 
 ## `IS`: Icache每路的组数
+
 | Encoding |  Meaning | 备注 |
 |        0 |       64 |      |
 |        1 |      128 |      |
@@ -22,6 +24,7 @@ Config1中与Cache相关的字段有：
 |        7 | Reserved |      |
 
 ## `IL`: Icache 每行的大小
+
 | Encoding | Meaning           | 备注 |
 |        0 | No Icache present |      |
 |        1 | 4 bytes           |      |
@@ -33,6 +36,7 @@ Config1中与Cache相关的字段有：
 |        7 | Reserved          |      |
 
 ## `IA`: Icacche组相连数
+
 | Encoding | Meaning       | 备注 |
 |        0 | Direct Mapped |      |
 |        1 | 2-way         |      |
