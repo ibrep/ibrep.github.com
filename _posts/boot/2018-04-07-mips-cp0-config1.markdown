@@ -67,7 +67,24 @@ Config1中与Cache相关的字段有：
   * 替换策略为随机法；
   * Dcache采用writeback写策略，Icache不可写；
   * Icache 和 Dcache的读写通路均为64 bits，也就是一次可读写一个DWORD。
-  
+
+# 启用kseg0 cache
+CP0 Config (register 16, select 0)的K0(2:0) 字段用来启用kseg0的缓存。
+写入`0x02`关闭cache，写入`0x03`启用cache。
+
+```
+CPU_DisableCache:
+	mfc0   	t0, CP0_CONFIG, 0
+	and   	t0, 0xfffffff8
+	or	t0, 0x2
+	mtc0   	t0, CP0_CONFIG, 0
+```
+```
+mfc0 a0, COP_0_CONFIG		/* enable kseg0 cachability */
+ori  a0, a0, 0x3           // ENABLE
+mtc0 a0, COP_0_CONFIG
+```
+
 # Cache的操作指令
 Cache操作指令的格式为：
 ```
@@ -77,7 +94,7 @@ CACHE op, offset(base)
 龙芯1C的GS232核支持以下Cache操作：
 
 | op      | 描述                       | 目标   |
-|---------+----------------------------+--------|
+|---------|----------------------------|--------|
 | 0b00000 | Index Invalidate           | Icache |
 | 0b00001 | Index Writeback Invalidate | Dcache |
 | 0b00101 | Index Load Tag             | Dcache |
