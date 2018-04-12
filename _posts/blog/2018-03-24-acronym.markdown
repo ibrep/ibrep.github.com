@@ -28,3 +28,7 @@ categories: blog
 
 `OTG(On-The-Go)`: 用于USB设备间的数据交换
 
+`GOT(Global Offset Table)`: 全局偏移量表
+
+`PLT(Procedure Linkage Table)`: 过程连接表
+
